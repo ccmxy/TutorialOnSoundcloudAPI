@@ -152,9 +152,15 @@
 																<br><br>In order for our app to gain permission to do this, we must register our app.
 																Go to <a href=http://soundcloud.com/you/apps> http://soundcloud.com/you/apps </a>:
 																<img class="small" src="img/register-app.png">
-																<br><br>You will need to either sign into or create a SoundCloud account. Now click "register application." 
+																<br><br>You will need to either sign into or create a SoundCloud account. Now click "register application." You will be taken to this page:
 
+																<img class="small" src="img/registerAppBar.png">
 
+																<br>Choose a name, check the Developer Policies box, and hit "Register" We'll call ours "SoundCloudAPIExample."
+																<br><br>Now we'll hit a roadblock.
+																<img class="small" src="img/register-app-creds.png">
+
+																<br>Notice the empty input boxes labeled "Website for your app" and "Redirect URI for Authorization." We will need to be able to access our index file on a server, which we will point the box "website of your app" to, and we will need to <strong>host another file on that same server</strong> which we set the <code>redirect_uri</code> to.
                                 <p>This plugin supports more than 30 different styles of scrolling. The easing option lets you choose a particular style of scrolling according to your choice.</p>
                                 <p>Some of them are shown here:</p>
                                 <pre><code class="language-javascript">$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});</code></pre>
