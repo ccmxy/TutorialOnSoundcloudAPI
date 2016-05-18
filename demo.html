@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>AnimateScroll Demo</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Ram Swaroop" />
+                <link rel="stylesheet" type="text/css" href="custom.css" />
+								<link rel="stylesheet" type="text/css" href="styles.css" />
+                <script src="jquery-1.8.3.min.js"></script>
+                <script src="animatescroll.js"></script>
+	</head>
+	<body>
+		<div class="container">
+
+			<header>
+				<h1>AnimateScroll Demo<span>A Simple jQuery Plugin for Animating Scroll</span></h1>
+			</header>
+			<div class="main clearfix">
+				<nav id="menu" class="nav">
+					<ul>
+						<li>
+							<a href="http://plugins.compzets.com" >
+								<span class="icon">
+									<i aria-hidden="true" class="icon-home"></i>
+								</span>
+								<span>Home</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-2').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-services"></i>
+								</span>
+								<span>What is it?</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-3').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-portfolio"></i>
+								</span>
+								<span>Options</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-4').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-blog"></i>
+								</span>
+								<span>Easing Effects</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-5').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-team"></i>
+								</span>
+								<span>Usage</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-6').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-contact"></i>
+								</span>
+								<span>About Me</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div><!-- /container -->
+
+                <div class="main clearfix">
+                        <div id="section-2">
+                            <div class="content-wrapper w70">
+                                <h1>What is an API, exactly?</h1>
+                                <p>API stands for <strong>Application Protocol Interface.</strong>
+																	To put it simply, when you're talking about an API, you're talking about a set of tools that you can use to request different services that can help you create software or web applications. </p>
+																	<p> A metaphor based in real-life might be operating a car.
+																		 You know that behind the dashobard are a set of tools that you can use to request different services from your car, like "turn on blinker" or "switch to a higher gear."
+																		 You don't need to know the ins-and-outs of how a car works to use these tools, <strong>you just need to know how to use them.</strong>
+																</p>
+
+
+                                <p><strong>Basic usage:</strong></p>
+                                <pre><code class="language-javascript">$('body').animatescroll();</code></pre>
+                                <button class="btn demo-btn" onclick="$('body').animatescroll();">Click for a Demo</button>
+                                <p>
+                                    It gives power to the user with its various options to customize the style of scrolling, scroll speed and many more.
+                                    Supports more than 30 unique Scrolling Styles.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="section-3">
+                            <div class="content-wrapper w70">
+                                <h1>Options</h1>
+                                <p>We're going to do three things in order to make this happen: </p>
+                                <ul>
+                                    <li><strong>Create</strong> a live Javascript application</li>
+                                    <li><strong>Register</strong> our application with SoundCloud</li>
+                                    <li><strong>Securely access</strong> the accounts of SoundCloud users at their wishes</li>
+                                </ul>
+
+                                <p> To begin, you will need to create an html file. Create a folder somewhere that you can remember, like your desktop,
+																	and create a file called <strong>index.html</strong>.</p>
+                                <div>
+                                  	We'll use a very basic skeleton:<br/>
+                                    <div class="element-demo">
+																			<p>
+																				<xmp><!DOCTYPE html></xmp>
+																				<xmp>	<html>	</xmp>
+																				<xmp>	<head>	</xmp>
+																					<xmp> <meta charset="UTF-8">	</xmp>
+																					<xmp>	<title>SoundCloudAuth</title> </xmp>
+																					<xmp>	</head>	</xmp>
+																					<xmp>	<body>	</xmp>
+																					<xmp>	  <h3>Sound Cloud Api Example</h3>	</xmp>
+																					<xmp>	</body>	</xmp>
+																					<xmp>	</html>	</xmp>
+																					<xmp>	</xmp></xmp>
+																			</p>
+
+                                    </div>
+                                </div>
+                                Copy or copy/paste the above template into index.html.<br/>
+
+																<br>If you click on the file from within your OS's file browser, it should open this simple webpage up in your browser:
+
+																<br><img class="small" src="img/basicWebPage.png">
+
+																Eventually we will get simple webpage this up online. But first we will get started with the SoundCloud API.
+                            </div>
+                        </div>
+
+                        <div id="section-4">
+                            <div class="content-wrapper w60 disp_inl_blk">
+                                <h1>Easing Effects</h1>
+                                <p>This plugin supports more than 30 different styles of scrolling. The easing option lets you choose a particular style of scrolling according to your choice.</p>
+                                <p>Some of them are shown here:</p>
+                                <pre><code class="language-javascript">$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});</code></pre>
+                                <pre><code class="language-javascript">$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});</code></pre>
+                                <pre><code class="language-javascript">$('#section-2').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});</code></pre>
+                                <pre><code class="language-javascript">$('#section-2').animatescroll({padding:-100});</code></pre>
+                            </div>
+                            <div class="content-wrapper w30 fr">
+                                <div class="easing-buttons">
+                                    <strong>Click the buttons below for a demo:</strong><br/><br/>
+                                    <button class="btn" onclick="$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});">easeInOutBack</button><br/><br/>
+                                    <button class="btn" onclick="$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">easeOutBounce</button><br/><br/>
+                                    <button class="btn" onclick="$('#section-2').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});">easeOutElastic</button><br/><br/>
+                                    <button class="btn" onclick="$('#section-2').animatescroll({padding:-100});">with padding</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="section-5"  onclick="$('#section-1').animatescroll({scrollSpeed:3000,padding:-30,easing:'easeOutElastic'});">
+                            <div class="content-wrapper w60 disp_inl_blk">
+                                <h1>Usage</h1>
+                                <p>You need two things for this plugin to work, one is <strong>"jQuery library"</strong> and the other <strong>"animatescroll.js"</strong> file</p>
+                                <p>Just include the "animatescroll.js" file after the "jQuery library" as shown in the code snippet below and you're done</p>
+                                <small>NOTE: The only dependency for this plugin to work is jQuery library</small>
+                                <pre class="language-markup">
+                                    <code class="language-markup" >
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src=&quot;animatescroll.js&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="section-1"&gt;This is the element where you want to scroll to&lt;div&gt;
+
+        /*
+         * You may call the function like this
+         * (but better attach an event listener)
+         */
+        &lt;a onclick=&quot;$('[jquery selector]').animatescroll([options]);&quot;&gt;Go to Element&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="content-wrapper w30 fr">
+                                <div class="download-buttons">
+                                    <button class="btn" onclick="window.location='http://plugins.compzets.com/animatescroll'">Download</button><br/><br/>
+                                    <button class="btn" onclick="window.location='https://github.com/ramswaroop/animatescroll.js'">Download from github</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="section-6">
+                            <div class="content-wrapper w70 disp_inl_blk">
+                                <h1>About Me</h1>
+                                <p>My name is <a href="http://www.ramswaroop.me" target="_blank">Ram Swaroop</a>. I am a Programmer as well as a Designer. I am the Founder of <a href="http://www.compzets.com" target="_blank">Compzets.com</a>, as well as various other <a href="http://webapps.compzets.com" target="_blank">online applications</a>.</p>
+                                <p>This is my first jQuery Plugin and I hope you all like it. You are free to make more improvements to the code and can do the same <a href="https://github.com/ramswaroop/animatescroll.js" target="_blank">@github</a>.</p>
+                                <p>If my plugin helped you or unlikely for any issues tweet me <a href="https://twitter.com/ramswarooppatra" target="_blank">@ramswaroopatra</a>, will be happy to hear from you.</p>
+                            </div>
+                            <div class='content-wrapper w30 fr'>
+                                <a onclick="$('body').animatescroll();" class='ptr fr'><small>Go to Top</small></a>
+                            </div>
+                        </div>
+                </div>
+	</body>
+</html>
