@@ -134,13 +134,27 @@
 
 																<br><img class="small" src="img/basicWebPage.png">
 
-																Eventually we will get simple webpage this up online. But first we will get started with the SoundCloud API.
+																<br>Eventually we will get simple webpage this up online. But first we will get started with the SoundCloud API.
                             </div>
                         </div>
 
                         <div id="section-4">
                             <div class="content-wrapper w60 disp_inl_blk">
-                                <h1>Easing Effects</h1>
+                                <h1>Registering our App for Authentication</h1>
+																<br>We are going to be using <a href="https://developers.soundcloud.com/docs#authentication">SoundCloud's client-side auth flow</a>, which has multiple purposes. We might just want to use SoundCloud as our own app's sign-in and registration process.
+																What we will do today will also allow users to sign in to SoundCloud through Facebook or Google+, which creates a seamless one-click sign-in for our app.
+
+																<br><br>It also allows us to act on the user's behalf regaurding their SoundCloud account (uploading sounds, for example).
+
+																<br><br>Our app also gains access to things the user has set to private: when the user decides to approve our app's authorization request, our app will be able to access their profile and any private
+																sounds that they have created or have had shared with them.
+
+																<br><br>In order for our app to gain permission to do this, we must register our app.
+																Go to <a href=http://soundcloud.com/you/apps> http://soundcloud.com/you/apps </a>:
+																<img class="small" src="img/register-app.png">
+																<br><br>You will need to either sign into or create a SoundCloud account. Now click "register application." 
+
+
                                 <p>This plugin supports more than 30 different styles of scrolling. The easing option lets you choose a particular style of scrolling according to your choice.</p>
                                 <p>Some of them are shown here:</p>
                                 <pre><code class="language-javascript">$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});</code></pre>
