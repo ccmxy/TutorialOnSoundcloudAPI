@@ -160,18 +160,17 @@
 																<br><br>Now we'll hit a roadblock.
 																<img class="small" src="img/register-app-creds.png">
 
-																<br>Notice the empty input boxes labeled "Website for your app" and "Redirect URI for Authorization." We will need to be able to access our index file on a server, which we will point the box "website of your app" to, and we will need to <strong>host another file on that same server</strong> which we set the <code>redirect_uri</code> to.
-                                <p>This plugin supports more than 30 different styles of scrolling. The easing option lets you choose a particular style of scrolling according to your choice.</p>
-                                <p>Some of them are shown here:</p>
-                                <pre><code class="language-javascript">$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});</code></pre>
-                                <pre><code class="language-javascript">$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});</code></pre>
-                                <pre><code class="language-javascript">$('#section-2').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});</code></pre>
-                                <pre><code class="language-javascript">$('#section-2').animatescroll({padding:-100});</code></pre>
+																<br>Notice the empty input boxes labeled "Website for your app" and "Redirect URI for Authorization."
+																 We will need to be able to access our index file on a server, which we will point the box "website of your app" to, and we will need
+																 to <strong>host another file on that same server</strong> which we set the <code>redirect_uri</code> to.
+
+																 <br><br><button class="btn" onclick="$('#section-5').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});">Next: Hosting our Website</button><br/><br/>
+
                             </div>
                             <div class="content-wrapper w30 fr">
                                 <div class="easing-buttons">
                                     <strong>Click the buttons below for a demo:</strong><br/><br/>
-                                    <button class="btn" onclick="$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});">easeInOutBack</button><br/><br/>
+                                    <button class="btn" onclick="$('#section-5').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});">easeInOutBack</button><br/><br/>
                                     <button class="btn" onclick="$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">easeOutBounce</button><br/><br/>
                                     <button class="btn" onclick="$('#section-2').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});">easeOutElastic</button><br/><br/>
                                     <button class="btn" onclick="$('#section-2').animatescroll({padding:-100});">with padding</button>
@@ -181,8 +180,44 @@
 
                         <div id="section-5"  onclick="$('#section-1').animatescroll({scrollSpeed:3000,padding:-30,easing:'easeOutElastic'});">
                             <div class="content-wrapper w60 disp_inl_blk">
-                                <h1>Usage</h1>
-                                <p>You need two things for this plugin to work, one is <strong>"jQuery library"</strong> and the other <strong>"animatescroll.js"</strong> file</p>
+                                <h1>Hosting our Website</h1>
+																<p>For this demo, we're going to use <strong>Amazon Web Services</strong> to host our website. Specifically, we are going to use Amazon Simple Service storage.
+																With Simple Service Storage, Inbound Data Transfer is free and outbound data transfer is free for 1 GB per region per month. Luckily this website will be small and not many will be using it
+																so I don't think we will get charged.  </p>
+
+																	<p> To start, we're going to assume that you already have an Amazon Web Services account.
+																	To host a simple website with javascript and html, simply go to the <a href="https://us-west-2.console.aws.amazon.com/console/">AWS Management Console</a>
+																and click on "S3". </p>
+
+																<img class="small" src="img/AWSS3.png">
+
+																<p>Then click "Create a bucket." You should be see something like this: </p>
+																<img class="small" src="img/createSite/1-Create_bucket.png">
+																<p>Choose a name and a region and click "create." </p>
+
+																<p>Next you will arrive at a page like this:</p>
+																<img class="small" src="img/createSite/2-hit-upload.png">
+
+																<p>Hit upload and navigate to the directory that you put our index.html file in to upload it:</p>
+																<img class="small" src="img/createSite/3-upload-from-computer.png">
+
+																<p>Now that the file is ready hit upload once more:</p>
+																<img class="small" src="img/createSite/4-hit-start-upload.png">
+
+																<p>Next, in order to make your file accessible, <strong>you need to right-click on it and hit make public</strong>:</p>
+																<img class="small" src="img/createSite/5-hit-make-public.png">
+
+																<p>Finally, to retreive the url, right click and hit <strong>properties</strong>:</p>
+																<img class="small" src="img/createSite/6-hit-properties.png">
+
+
+																<p>And now the url of your index file is visible in the right-hand side of the screen, next to "link":</p>
+																<img class="small" src="img/createSite/7-get-link.png">
+
+
+
+
+
                                 <p>Just include the "animatescroll.js" file after the "jQuery library" as shown in the code snippet below and you're done</p>
                                 <small>NOTE: The only dependency for this plugin to work is jQuery library</small>
                                 <pre class="language-markup">
