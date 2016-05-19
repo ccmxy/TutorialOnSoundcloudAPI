@@ -152,7 +152,7 @@
 																<br><br>In order for our app to gain permission from SoundCloud to do this, we must register our app.
 																Go to <a href=http://soundcloud.com/you/apps> http://soundcloud.com/you/apps </a>:
 																<img class="small" src="img/register-app.png">
-																<br><br>You will need to either sign into or create a SoundCloud account. Now click "register application." You will be taken to this page:
+																<br><br>You will need to either sign into or create a SoundCloud account. Now click "register application." You will be taken to this page:<br>
 
 																<img class="small" src="img/registerAppBar.png">
 
@@ -256,6 +256,7 @@
 																			Add this javascript to index.html just before the closing <xmp></body></xmp> tag, <strong> replacing YOUR_CLIENT_ID and http://example.com/callback with the proper credentials</strong>:</p>
 
 <pre><code class="language-javascript">
+		<xmp><script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script></xmp>
 																			<xmp>	<script>
         SC.initialize({
           client_id: 'YOUR_CLIENT_ID',
@@ -295,5 +296,6 @@
                             </div>
                         </div>
                 </div>
+								<script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
 	</body>
 </html>
