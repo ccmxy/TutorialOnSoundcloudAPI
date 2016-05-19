@@ -166,7 +166,7 @@
 																 We will need to be able to access our index file on a server, which we will point the box "website of your app" to, and we will need
 																 to <strong>host a callback file on that same server</strong> which we set <code>redirect_uri</code> to.
                                                                  
-                                                                 <br><br>Upon a successful connection, this file will be used to <strong>send an authentication token back to our application</strong>, allowing the host app to access account privilages for a specific user. For security reasons, SoundCloud will only redirect users to URIs which are hosted <strong>on the same domain as the host app.</strong> Therefor, we will have to add in another file later. But we'll worry about that then.
+                                                                 <br><br>Upon a successful connection, this file will be used to <strong>send an authentication token back to our application</strong>, allowing the host app to access account privilages for a specific user. For security reasons, SoundCloud will only redirect users to URIs which are hosted <strong>on the same domain as the host app.</strong> Therefore, we will have to add in another file later. But we'll worry about that then.
 
 																 <br><br><button class="btn" onclick="$('#section-5').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Hosting our Website</button><br/><br/>
 
@@ -280,7 +280,7 @@
 		</code>
 	</pre>
 
-    <p>'SC' is a type of object that exists in the SoundCloud API, which we link to as a javascript source on the first line.
+    <p> On the first line we gain access to the SoundCloud API, allowing us to access all of the functions and object types in <a href="https://connect.soundcloud.com/sdk/sdk-3.0.0.js">this file</a>. 'SC' is a type of object that exists in the SoundCloud API, which we link to as a javascript source on the first line.
     If the credentials are valid than SC.connect() will initialize a connection to the user by contacting the redirect uri. If the redirect uri is valid than a <strong>Promise object</strong> is returned.
     The next word, <strong>then</strong>, refers to the successful return of that <strong>Promise.</strong> If the connection is made and the promise is fulfilled, a request for the user (in the form of <code>SC.get('/me')</code>) is made... and finally the <strong>next</strong> then refers to the fulfillment of <strong>that</strong> Promise, upon success of which it will alert, "Hello, [username]!"
     </p>
@@ -290,7 +290,7 @@
     </p>
     
     <p>
-    If an <strong> "invalid uri</strong> window pops up instead of a log-in window, there was probably a problem with authentication.
+    If an <strong> "invalid uri"</strong> window pops up instead of a log-in window, there was probably a problem with authentication.
     </p>
 
 
