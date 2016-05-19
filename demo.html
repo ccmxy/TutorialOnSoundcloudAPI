@@ -217,6 +217,7 @@
 																<p>That's the first URL that we need to register our app. Let's enter it now.</p>
 																<img class="small" src="img/enterWebsiteOfApp.png">
 
+																<br><br><button class="btn" onclick="$('#section-6').animatescroll({scrollSpeed:2000,easing:'easeInOutBounce'});">Next: Creating the Redirect URI</button><br/><br/>
 
 
                                 <p>Just include the "animatescroll.js" file after the "jQuery library" as shown in the code snippet below and you're done</p>
@@ -251,11 +252,108 @@
 
                         <div id="section-6">
                             <div class="content-wrapper w70 disp_inl_blk">
-                                <h1>About Me</h1>
+                                <h1>The Redirect URI</h1>
+																<p>Navigate to the folder on your computer that the index.html file is saved in and create a new html file.
+																	In this example it will be called callback.html.
+
+																	In callback.html, copy or copy/paste this code:
+																	<div class="element-demo">
+																		<p>
+																			<xmp><!DOCTYPE html></xmp>
+																			<xmp>	<html>	</xmp>
+																			<xmp>	<head>	</xmp>
+																				<xmp> <meta charset="UTF-8">	</xmp>
+																				<xmp>	<title>Callback</title> </xmp>
+																				<xmp>	</head>	</xmp>
+																				<xmp>	<body onload="window.setTimeout(opener.SC.connectCallback, 1);"></xmp>
+																							<xmp> <p> </xmp>
+																								<xmp>	This page should close soon </xmp>
+																							<xmp>	</p>	</xmp>
+																					<xmp>	</body>	</xmp>
+																				<xmp>	</html>	</xmp>
+
+
+																		</p>
+
+																	</div>
+																	<p>Now save the file and <strong>upload callback.html to the same bucket</strong> as you uploaded index.html too, and <strong>don't forget to also make this file public.</strong> </p>
+																	<p>	Just like you did with index.html, right click and hit "properties" to <strong>grab the url. </strong>It should be the same as the last url except that index.html should be replaced with callback.html.</p>
+																	<p>Now paste that url into your app at <a href="www.soundcloud.you.apps">soundcloud.you.apps</a> and <strong>hit "Save app:"</strong>:</p>
+																	<img class="small" src="img/save-callback-uri.png">
+
+																	<br><br><button class="btn" onclick="$('#section-7').animatescroll({scrollSpeed:2000,easing:'easeOutElastic'});">Next: Implementing the Javascript</button><br/><br/>
+
+
+															</div>
+
+																	</p>
+
+
                                 <p>My name is <a href="http://www.ramswaroop.me" target="_blank">Ram Swaroop</a>. I am a Programmer as well as a Designer. I am the Founder of <a href="http://www.compzets.com" target="_blank">Compzets.com</a>, as well as various other <a href="http://webapps.compzets.com" target="_blank">online applications</a>.</p>
                                 <p>This is my first jQuery Plugin and I hope you all like it. You are free to make more improvements to the code and can do the same <a href="https://github.com/ramswaroop/animatescroll.js" target="_blank">@github</a>.</p>
                                 <p>If my plugin helped you or unlikely for any issues tweet me <a href="https://twitter.com/ramswarooppatra" target="_blank">@ramswaroopatra</a>, will be happy to hear from you.</p>
                             </div>
+
+														<div id="section-7">
+																<div class="content-wrapper w70 disp_inl_blk">
+																		<h1>Adding the Javascript</h1>
+																		<p>Finally, we're going to add some javascript to our index file that will <strong>use SoundCloud's HTTP API</strong>
+																			in order to <strong>prompt the user to connect their soundcloud account to our web app</strong> via a pop-up window.
+																			Add this javascript to index.html just before the closing <xmp></body></xmp> tag, <strong> replacing YOUR_CLIENT_ID and http://example.com/callback with the proper credentials</strong>:</p>
+
+<!--
+																			<div class="element-demo">
+																				<p>
+																					<xmp>        <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script></xmp>
+																					<xmp>	<script>	</xmp>
+																					<xmp>	<head>	</xmp>
+																						<xmp> <meta charset="UTF-8">	</xmp>
+																						<xmp>	<title>Callback</title> </xmp>
+																						<xmp>	</head>	</xmp>
+																						<xmp>	<body onload="window.setTimeout(opener.SC.connectCallback, 1);"></xmp>
+																									<xmp> <p> </xmp>
+																										<xmp>	This page should close soon </xmp>
+																									<xmp>	</p>	</xmp>
+																							<xmp>	</body>	</xmp>
+																						<xmp>	</html>	</xmp>
+
+
+																				</p> -->
+<pre><code class="language-javascript">
+																			<xmp>	<script>
+        SC.initialize({
+          client_id: 'YOUR_CLIENT_ID',
+          redirect_uri: 'http://example.com/callback'
+      });
+
+      // initiate auth popup
+      SC.connect().then(function() {
+          return SC.get('/me');
+      }).then(function(me) {
+          alert('Hello, ' + me.username);
+      });
+      </script>
+		</xmp>
+		</code>
+	</pre>
+
+	<p><small>YOUR_CLIENT_ID</small> should be replaced with <strong>the string of letters and numbers next to "client id" in your app</strong>,
+		and http://example.com/callback should be replaced with <strong>the live url to your callback file.</strong></p>
+
+		<p>Hopefully you have now saved them <a href="www.soundcloud.you.apps">where you registered your app:</a>
+			<img class="small" src="img/theseCreds.png">
+			<p>Once you've done that, hit save and then <strong>re-upoad index.html to your S3 bucket</strong> (don't forget to <strong>make it public again!</strong>).</p>
+
+			<p>  Now, assuming all has gone well, and you turn off your pop-up blocker, when you enter your web-page you should be greeted by this:</p>
+			<img class="small" src="img/popup-signin.png">
+
+			<p>Your web app is now all set to connect to the SoundCloud acccounts of visiting users! There are many more things you can do with the API from this point,
+      from allowing users to upload music to their SoundCloud accounts or play their music from your web app. Now that you've gotten started, check the documentation
+    at <a href=https://developers.soundcloud.com/>developers.soundcloud.com</a> for the next exciting step!</p>
+
+		<h2>Thank you for doing my tutorial, and I'll see you next time!</h2>
+		<p> -Colleen </p>
+																</div>
                             <div class='content-wrapper w30 fr'>
                                 <a onclick="$('body').animatescroll();" class='ptr fr'><small>Go to Top</small></a>
                             </div>
