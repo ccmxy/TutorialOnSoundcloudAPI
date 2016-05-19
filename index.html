@@ -81,6 +81,8 @@
                         <div id="section-2">
                             <div class="content-wrapper w70">
                                 <h1>What is an API, exactly?</h1>
+                                <p>Before we delve into <a href=https://developers.soundcloud.com/>developers.soundcloud.com</a>, let's discuss what <strong>API</strong> means.</p>
+
                                 <p>API stands for <strong>Application Protocol Interface.</strong>
 																	To put it simply, when you're talking about an API, you're talking about a set of tools that you can use to request different services that can help you create software or web applications. </p>
 																	<p> A metaphor based in real-life might be operating a car.
@@ -146,7 +148,7 @@
                             <div class="content-wrapper w70">
                                 <h1>Registering our App for Authentication</h1>
 
-																<br><br>We talked about how if our app is allowed to access the users' SoundCloud account, it may view
+																We talked about how if our app is allowed to access the users' SoundCloud account, it may view
 																things that they have marked private, as well as act on their behalf.
 
 																<br><br>In order for our app to gain permission from SoundCloud to do this, we must register our app.
@@ -162,7 +164,9 @@
 
 																<br>Notice the empty input boxes labeled "Website for your app" and "Redirect URI for Authorization."
 																 We will need to be able to access our index file on a server, which we will point the box "website of your app" to, and we will need
-																 to <strong>host another file on that same server</strong> which we set the <code>redirect_uri</code> to.
+																 to <strong>host a callback file on that same server</strong> which we set <code>redirect_uri</code> to.
+                                                                 
+                                                                 <br><br>Upon a successful connection, this file will be used to <strong>send an authentication token back to our application</strong>, allowing the host app to access account privilages for a specific user. For security reasons, SoundCloud will only redirect users to URIs which are hosted <strong>on the same domain as the host app.</strong> Therefor, we will have to add in another file later. But we'll worry about that then.
 
 																 <br><br><button class="btn" onclick="$('#section-5').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Hosting our Website</button><br/><br/>
 
@@ -216,6 +220,8 @@
                         <div id="section-6">
                             <div class="content-wrapper w60 disp_inl_blk">
                                 <h1>Creating the Redirect URI</h1>
+                                                <p>Now it's time to create the redirect URI.</p>
+                                                <p>This is a live file which will be contacted by SoundCloud's API, so that it can then send an <strong>authentication token</strong> back to our application. Once received, our application will be able to use this user token via <strong>callback functions</strong>. We'll go over that last.'</p>
 																<p>Navigate to the folder on your computer that the index.html file is saved in and create a new html file.
 																	In this example it will be called callback.html.
 
@@ -244,7 +250,7 @@
 																	<p>Now paste that url into your app at <a href="www.soundcloud.you.apps">soundcloud.you.apps</a> and <strong>hit "Save app:"</strong>:</p>
 																	<img class="small" src="img/save-callback-uri.png">
 
-																	<br><br><button class="btn" onclick="$('#section-7').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Implementing the Javascript</button><br/><br/>
+																	<br><br><button class="btn" onclick="$('#section-7').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Adding the Javascript</button><br/><br/>
 															</div>
                             </div>
 
@@ -253,7 +259,7 @@
 																		<h1>Adding the Javascript</h1>
 																		<p>Finally, we're going to add some javascript to our index file that will <strong>use SoundCloud's HTTP API</strong>
 																			in order to <strong>prompt the user to connect their soundcloud account to our web app</strong> via a pop-up window.
-																			Add this javascript to index.html just before the closing <xmp></body></xmp> tag, <strong> replacing YOUR_CLIENT_ID and http://example.com/callback with the proper credentials</strong>:</p>
+																			Add this javascript to index.html just before the closing <xmp></body></xmp> tag, replacing <small><strong>YOUR_CLIENT_ID</strong></strong> and <strong>http://example.com/callback</strong> with the proper credentials (instructions on how to do this further down):</p>
 
 <pre><code class="language-javascript">
 		<xmp><script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script></xmp>
@@ -274,8 +280,22 @@
 		</code>
 	</pre>
 
-	<p><small>YOUR_CLIENT_ID</small> should be replaced with <strong>the string of letters and numbers next to "client id" in your app</strong>,
-		and http://example.com/callback should be replaced with <strong>the live url to your callback file.</strong></p>
+    <p>'SC' is a type of object that exists in the SoundCloud API, which we link to as a javascript source on the first line.
+    If the credentials are valid than SC.connect() will initialize a connection to the user by contacting the redirect uri. If the redirect uri is valid than a <strong>Promise object</strong> is returned.
+    The next word, <strong>then</strong>, refers to the successful return of that <strong>Promise.</strong> If the connection is made and the promise is fulfilled, a request for the user (in the form of <code>SC.get('/me')</code>) is made... and finally the <strong>next</strong> then refers to the fulfillment of <strong>that</strong> Promise, upon success of which it will alert, "Hello, [username]!"
+    </p>
+    
+    <p>
+    If the callback.html page <strong>does not close soon</strong> after and show the "hello" alert, there was probably a problem with the call-back.
+    </p>
+    
+    <p>
+    If an <strong> "invalid uri</strong> window pops up instead of a log-in window, there was probably a problem with authentication.
+    </p>
+
+
+<p><small>YOUR_CLIENT_ID</small> should be replaced with <strong>the string of letters and numbers next to "client id" in your app</strong>. A client id serves a similar purpose to an API key: it prevents people from abusing the system by spamming it with requests, and in this case it adds security as well.<p>
+		<p>http://example.com/callback should be replaced with <strong>the live url to your callback file.</strong></p>
 
 		<p>Hopefully you have now saved them <a href="www.soundcloud.you.apps">where you registered your app:</a>
 			<img class="small" src="img/theseCreds.png">
@@ -284,12 +304,12 @@
 			<p>  Now, assuming all has gone well, and you turn off your pop-up blocker, when you enter your web-page you should be greeted by this:</p>
 			<img class="small" src="img/popup-signin.png">
 
-			<p>Your web app is now all set to connect to the SoundCloud acccounts of visiting users! There are many more things you can do with the API from this point,
+			<p>Your web app is now all set to connect to the SoundCloud acccounts of visiting users! There are many more things you could choose to do with this API,
       from allowing users to upload music to their SoundCloud accounts or play their music from your web app. Now that you've gotten started, check the documentation
-    at <a href=https://developers.soundcloud.com/>developers.soundcloud.com</a> for the next exciting step!</p>
+    at <a href=https://developers.soundcloud.com/>developers.soundcloud.com</a> to see what else you can do!</p>
 
-		<h2>Thank you for doing my tutorial, and I'll see you next time!</h2>
-		<p> -Colleen </p>
+		<h2>Thank you for doing my tutorial!</h2>
+		<p> &emsp; -Colleen </span>
 																</div>
                             <div class='content-wrapper w30 fr'>
                                 <a onclick="$('body').animatescroll();" class='ptr fr'><small>Go to Top</small></a>
