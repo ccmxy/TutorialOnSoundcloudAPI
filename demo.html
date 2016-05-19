@@ -43,7 +43,7 @@
 								<span class="icon">
 									<i aria-hidden="true" class="icon-portfolio"></i>
 								</span>
-								<span>Options</span>
+								<span>Getting Started</span>
 							</a>
 						</li>
 						<li>
@@ -51,7 +51,7 @@
 								<span class="icon">
 									<i aria-hidden="true" class="icon-blog"></i>
 								</span>
-								<span>Easing Effects</span>
+								<span>Registering App for SoundCloud Authentication</span>
 							</a>
 						</li>
 						<li>
@@ -59,7 +59,7 @@
 								<span class="icon">
 									<i aria-hidden="true" class="icon-team"></i>
 								</span>
-								<span>Usage</span>
+								<span>Hosting the Website</span>
 							</a>
 						</li>
 						<li>
@@ -67,7 +67,15 @@
 								<span class="icon">
 									<i aria-hidden="true" class="icon-contact"></i>
 								</span>
-								<span>About Me</span>
+								<span>Creating the Redirect URI</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-7').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-contact"></i>
+								</span>
+								<span>Adding the Javascript</span>
 							</a>
 						</li>
 					</ul>
@@ -99,7 +107,17 @@
 
                         <div id="section-3">
                             <div class="content-wrapper w70">
-                                <h1>Options</h1>
+															<h1>Getting Started</h1>
+
+															 Today we are going to be using SoundCloud's client-side auth flow, an authentication method from <a href="https://developers.soundcloud.com/">the official SoundCloud API</a> which has multiple potential purposes.
+															 If we were doing server-side development and wanted to recognize our users, we might use SoundCloud as for our sign-in and registration process.
+															 What is especially useful about this method is that users can also sign in to SoundCloud through Facebook or Google+, which creates a seamless one-click sign-in for our app.
+
+															 <br><br>It also allows us to act on the user's behalf regaurding their SoundCloud account (uploading sounds, for example).
+
+															 <br><br>Our app also gains access to things the user has set to private: when the user decides to approve our app's authorization request, our app will be able to access their profile and any private
+															 sounds that they have created or have had shared with them.
+
                                 <p>We're going to do three things in order to make this happen: </p>
                                 <ul>
                                     <li><strong>Create</strong> a live Javascript application</li>
@@ -135,21 +153,18 @@
 																<br><img class="small" src="img/basicWebPage.png">
 
 																<br>Eventually we will get simple webpage this up online. But first we will get started with the SoundCloud API.
+															<br><br><button class="btn" onclick="$('#section-3').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});">Next: Registering our App</button><br/><br/>
                             </div>
                         </div>
 
                         <div id="section-4">
                             <div class="content-wrapper w60 disp_inl_blk">
                                 <h1>Registering our App for Authentication</h1>
-																<br>We are going to be using <a href="https://developers.soundcloud.com/docs#authentication">SoundCloud's client-side auth flow</a>, which has multiple purposes. We might just want to use SoundCloud as our own app's sign-in and registration process.
-																What we will do today will also allow users to sign in to SoundCloud through Facebook or Google+, which creates a seamless one-click sign-in for our app.
 
-																<br><br>It also allows us to act on the user's behalf regaurding their SoundCloud account (uploading sounds, for example).
+																<br><br>We talked about how if our app is allowed to access the users' SoundCloud account, it may view
+																things that they have marked private, as well as act on their behalf.
 
-																<br><br>Our app also gains access to things the user has set to private: when the user decides to approve our app's authorization request, our app will be able to access their profile and any private
-																sounds that they have created or have had shared with them.
-
-																<br><br>In order for our app to gain permission to do this, we must register our app.
+																<br><br>In order for our app to gain permission from SoundCloud to do this, we must register our app.
 																Go to <a href=http://soundcloud.com/you/apps> http://soundcloud.com/you/apps </a>:
 																<img class="small" src="img/register-app.png">
 																<br><br>You will need to either sign into or create a SoundCloud account. Now click "register application." You will be taken to this page:
@@ -252,7 +267,7 @@
 
                         <div id="section-6">
                             <div class="content-wrapper w70 disp_inl_blk">
-                                <h1>The Redirect URI</h1>
+                                <h1>Creating the Redirect URI</h1>
 																<p>Navigate to the folder on your computer that the index.html file is saved in and create a new html file.
 																	In this example it will be called callback.html.
 
@@ -287,11 +302,6 @@
 															</div>
 
 																	</p>
-
-
-                                <p>My name is <a href="http://www.ramswaroop.me" target="_blank">Ram Swaroop</a>. I am a Programmer as well as a Designer. I am the Founder of <a href="http://www.compzets.com" target="_blank">Compzets.com</a>, as well as various other <a href="http://webapps.compzets.com" target="_blank">online applications</a>.</p>
-                                <p>This is my first jQuery Plugin and I hope you all like it. You are free to make more improvements to the code and can do the same <a href="https://github.com/ramswaroop/animatescroll.js" target="_blank">@github</a>.</p>
-                                <p>If my plugin helped you or unlikely for any issues tweet me <a href="https://twitter.com/ramswarooppatra" target="_blank">@ramswaroopatra</a>, will be happy to hear from you.</p>
                             </div>
 
 														<div id="section-7">
