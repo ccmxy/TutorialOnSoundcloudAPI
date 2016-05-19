@@ -7,7 +7,7 @@
 		<title>AnimateScroll Demo</title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<meta name="author" content="Ram Swaroop" />
+		<meta name="author" content="Colleen Minor" />
                 <link rel="stylesheet" type="text/css" href="custom.css" />
 								<link rel="stylesheet" type="text/css" href="styles.css" />
                 <script src="jquery-1.8.3.min.js"></script>
@@ -17,7 +17,7 @@
 		<div class="container">
 
 			<header>
-				<h1>AnimateScroll Demo<span>A Simple jQuery Plugin for Animating Scroll</span></h1>
+				<h1>Colleen's SoundCloud API Tutorial <span>A Tutorial on How to use SoundCloud's client-side auth flo to authenticate users with one click.</span></h1>
 			</header>
 			<div class="main clearfix">
 				<nav id="menu" class="nav">
@@ -93,15 +93,7 @@
 																		 You know that behind the dashobard are a set of tools that you can use to request different services from your car, like "turn on blinker" or "switch to a higher gear."
 																		 You don't need to know the ins-and-outs of how a car works to use these tools, <strong>you just need to know how to use them.</strong>
 																</p>
-
-
-                                <p><strong>Basic usage:</strong></p>
-                                <pre><code class="language-javascript">$('body').animatescroll();</code></pre>
-                                <button class="btn demo-btn" onclick="$('body').animatescroll();">Click for a Demo</button>
-                                <p>
-                                    It gives power to the user with its various options to customize the style of scrolling, scroll speed and many more.
-                                    Supports more than 30 unique Scrolling Styles.
-                                </p>
+																<br><br><button class="btn" onclick="$('#section-3').animatescroll({scrollSpeed:3000,easing:'easeInOutBounce'});">Next: Getting Started</button><br/><br/>
                             </div>
                         </div>
 
@@ -143,7 +135,6 @@
 																					<xmp>	</html>	</xmp>
 																					<xmp>	</xmp></xmp>
 																			</p>
-
                                     </div>
                                 </div>
                                 Copy or copy/paste the above template into index.html.<br/>
@@ -158,7 +149,7 @@
                         </div>
 
                         <div id="section-4">
-                            <div class="content-wrapper w60 disp_inl_blk">
+                            <div class="content-wrapper w70">
                                 <h1>Registering our App for Authentication</h1>
 
 																<br><br>We talked about how if our app is allowed to access the users' SoundCloud account, it may view
@@ -172,29 +163,20 @@
 																<img class="small" src="img/registerAppBar.png">
 
 																<br>Choose a name, check the Developer Policies box, and hit "Register" We'll call ours "SoundCloudAPIExample."
-																<br><br>Now we'll hit a roadblock.
+																<br><br>Now we'll hit a roadblock.<br>
 																<img class="small" src="img/register-app-creds.png">
 
 																<br>Notice the empty input boxes labeled "Website for your app" and "Redirect URI for Authorization."
 																 We will need to be able to access our index file on a server, which we will point the box "website of your app" to, and we will need
 																 to <strong>host another file on that same server</strong> which we set the <code>redirect_uri</code> to.
 
-																 <br><br><button class="btn" onclick="$('#section-5').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});">Next: Hosting our Website</button><br/><br/>
+																 <br><br><button class="btn" onclick="$('#section-5').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Hosting our Website</button><br/><br/>
 
-                            </div>
-                            <div class="content-wrapper w30 fr">
-                                <div class="easing-buttons">
-                                    <strong>Click the buttons below for a demo:</strong><br/><br/>
-                                    <button class="btn" onclick="$('#section-5').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});">easeInOutBack</button><br/><br/>
-                                    <button class="btn" onclick="$('#section-2').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">easeOutBounce</button><br/><br/>
-                                    <button class="btn" onclick="$('#section-2').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});">easeOutElastic</button><br/><br/>
-                                    <button class="btn" onclick="$('#section-2').animatescroll({padding:-100});">with padding</button>
-                                </div>
                             </div>
                         </div>
 
-                        <div id="section-5"  onclick="$('#section-1').animatescroll({scrollSpeed:3000,padding:-30,easing:'easeOutElastic'});">
-                            <div class="content-wrapper w60 disp_inl_blk">
+                        <div id="section-5"  onclick="$('#section-6').animatescroll({scrollSpeed:3000,padding:-30,easing:'easeInOutBack'});">
+                            <div class="content-wrapper w70">
                                 <h1>Hosting our Website</h1>
 																<p>For this demo, we're going to use <strong>Amazon Web Services</strong> to host our website. Specifically, we are going to use Amazon Simple Service storage.
 																With Simple Service Storage, Inbound Data Transfer is free and outbound data transfer is free for 1 GB per region per month. Luckily this website will be small and not many will be using it
@@ -235,9 +217,10 @@
 																<br><br><button class="btn" onclick="$('#section-6').animatescroll({scrollSpeed:2000,easing:'easeOutElastic'});">Next: Creating the Redirect URI</button><br/><br/>
 
                         </div>
+											</div>
 
                         <div id="section-6">
-                            <div class="content-wrapper w70 disp_inl_blk">
+                            <div class="content-wrapper w60 disp_inl_blk">
                                 <h1>Creating the Redirect URI</h1>
 																<p>Navigate to the folder on your computer that the index.html file is saved in and create a new html file.
 																	In this example it will be called callback.html.
@@ -269,8 +252,6 @@
 
 																	<br><br><button class="btn" onclick="$('#section-7').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Implementing the Javascript</button><br/><br/>
 															</div>
-
-																	</p>
                             </div>
 
 														<div id="section-7">
