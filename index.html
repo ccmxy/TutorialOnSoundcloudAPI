@@ -1,275 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>How to: Use find Address by IP API </title>
-      <!-- Bootstrap Core CSS -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <!-- Custom CSS -->
-      <link href="css/scrolling-nav.css" rel="stylesheet">
-      <link href="css/styles.css" rel="stylesheet" type="text/css">
-      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-   </head>
-   <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-      <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-         <div class="container">
-            <div class="navbar-header page-scroll">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-               <ul class="nav navbar-nav">
-                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                  <li class="hidden">
-                     <a class="page-scroll" href="#page-top"></a>
-                  </li>
-                  <li>
-                     <a class="page-scroll" href="#explanation">Introduction</a>
-                  </li>
-                  <li>
-                     <a class="page-scroll" href="#htmlPage">Html</a>
-                  </li>
-                  <li>
-                     <a class="page-scroll" href="#registerApp">Register App</a>
-                  </li>
-                  <li>
-                     <a class="page-scroll" href="#gettingOnline">Getting our site Online</a>
-                  </li>
-                  <li>
-                     <a class="prev-button">Prev</a>
-                  </li>
-                  <li>
-                     <a class="next-button">Next</a>
-                  </li>
-               </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-         </div>
-         <!-- /.container -->
-      </nav>
-         <!-- Intro Section -->
-         <section id="intro" class="intro-section">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-12">
-                     <h2>How did I know, you may wonder?</h2>
-                     <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                     <a class="btn btn-default page-scroll" href="#explanation">Click Me to Scroll Down!</a>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- About Section -->
-         <section id="explanation" class="about-section">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-12">
-                     <h1>So, what is an API, anyway? </h1>
-                     <p>API stands for Application Protocol Interface. To put it simply, when you're talking about an API, you're talking about a set of tools that you can use to request different services that can help you create software or web applications. A metaphor based in real-life might be operating a car. You know that behind the dashobard are a set of tools that you can use to request different services from your car, like "turn on blinker" or "switch to a higher gear." You don't need to know the ins-and-outs of how a car works to use these tools, you just need to know how to use them. </p>
-                     </p>
-                     Today, we're going to do something very simple: We're going to use the <a href="https://developers.soundcloud.com/">Soundcloud API
-                     </a> to add a simple widget to an HTML page. Since I understand that you may not have any experience with web development, we're going to start from scratch.
-                     </p>
-                     <p>Start by saving an HTML file. We'll call it index.html. Simply ADD HERE</p>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>AnimateScroll Demo</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Colleen Minor" />
+                <link rel="stylesheet" type="text/css" href="custom.css" />
+								<link rel="stylesheet" type="text/css" href="styles.css" />
+                <script src="jquery-1.8.3.min.js"></script>
+                <script src="animatescroll.js"></script>
+	</head>
+	<body>
+		<div class="container">
+
+			<header>
+				<h1 class="title"> SoundCloud AuthFlo API Tutorial
+					<span>A Tutorial on How to use SoundCloud's client-side auth flo to authenticate users with one click.</span>
+				  <span>By Colleen Minor </span></h1>
+			</header>
+				<nav id="menu" class="nav">
+					<ul>
+				<hx>Table of Contents</hx>
+						<li>
+							<a href="#" onclick="$('#section-2').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-services"></i>
+								</span>
+								<span>What is an API?</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-3').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-portfolio"></i>
+								</span>
+								<span>Getting Started</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-4').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-blog"></i>
+								</span>
+								<span>Registering App for SoundCloud Authentication</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-5').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-team"></i>
+								</span>
+								<span>Hosting the Website</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-6').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-contact"></i>
+								</span>
+								<span>Creating the Redirect URI</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-7').animatescroll();">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-contact"></i>
+								</span>
+								<span>Adding the Javascript</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+		</div>
+		<br><br>
+
+                <div class="main clearfix">
+                        <div id="section-2">
+                            <div class="content-wrapper w70">
+                                <h1>What is an API, exactly?</h1>
+                                <p>API stands for <strong>Application Protocol Interface.</strong>
+																	To put it simply, when you're talking about an API, you're talking about a set of tools that you can use to request different services that can help you create software or web applications. </p>
+																	<p> A metaphor based in real-life might be operating a car.
+																		 You know that behind the dashobard are a set of tools that you can use to request different services from your car, like "turn on blinker" or "switch to a higher gear."
+																		 You don't need to know the ins-and-outs of how a car works to use these tools, <strong>you just need to know how to use them.</strong>
+																</p>
+																<br><br><button class="btn" onclick="$('#section-3').animatescroll({scrollSpeed:3000,easing:'easeInOutBounce'});">Next: Getting Started</button><br/><br/>
+                            </div>
+                        </div>
+
+                        <div id="section-3">
+                            <div class="content-wrapper w70">
+															<h1>Getting Started</h1>
+
+															 Today we are going to be using SoundCloud's client-side auth flow, an authentication method from <a href="https://developers.soundcloud.com/">the official SoundCloud API</a> which has multiple potential purposes.
+															 If we were doing server-side development and wanted to recognize our users, we might use SoundCloud as for our sign-in and registration process.
+															 What is especially useful about this method is that users can also sign in to SoundCloud through Facebook or Google+, which creates a seamless one-click sign-in for our app.
+
+															 <br><br>It also allows us to act on the user's behalf regaurding their SoundCloud account (uploading sounds, for example).
+
+															 <br><br>Our app also gains access to things the user has set to private: when the user decides to approve our app's authorization request, our app will be able to access their profile and any private
+															 sounds that they have created or have had shared with them.
+
+                                <p>We're going to do three things in order to make this happen: </p>
+                                <ul>
+                                    <li><strong>Create</strong> a live Javascript application</li>
+                                    <li><strong>Register</strong> our application with SoundCloud</li>
+                                    <li><strong>Securely access</strong> the accounts of SoundCloud users at their wishes</li>
+                                </ul>
+
+                                <p> To begin, you will need to create an html file. Create a folder somewhere that you can remember, like your desktop,
+																	and create a file called <strong>index.html</strong>.</p>
+                                <div>
+                                  	We'll use a very basic skeleton:<br/>
+                                    <div class="element-demo">
+																			<p>
+																				<xmp><!DOCTYPE html></xmp>
+																				<xmp>	<html>	</xmp>
+																				<xmp>	<head>	</xmp>
+																					<xmp> <meta charset="UTF-8">	</xmp>
+																					<xmp>	<title>SoundCloudAuth</title> </xmp>
+																					<xmp>	</head>	</xmp>
+																					<xmp>	<body>	</xmp>
+																					<xmp>	  <h3>Sound Cloud Api Example</h3>	</xmp>
+																					<xmp>	</body>	</xmp>
+																					<xmp>	</html>	</xmp>
+																					<xmp>	</xmp></xmp>
+																			</p>
+                                    </div>
+                                </div>
+                                Copy or copy/paste the above template into index.html.<br/>
+
+																<br>If you click on the file from within your OS's file browser, it should open this simple webpage up in your browser:
+
+																<br><img class="small" src="img/basicWebPage.png">
+
+																<br>Eventually we will get simple webpage this up online. But first we will get started with the SoundCloud API.
+															<br><br><button class="btn" onclick="$('#section-4').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});">Next: Registering our App</button><br/><br/>
+                            </div>
+                        </div>
+
+                        <div id="section-4">
+                            <div class="content-wrapper w70">
+                                <h1>Registering our App for Authentication</h1>
+
+																<br><br>We talked about how if our app is allowed to access the users' SoundCloud account, it may view
+																things that they have marked private, as well as act on their behalf.
+
+																<br><br>In order for our app to gain permission from SoundCloud to do this, we must register our app.
+																Go to <a href=http://soundcloud.com/you/apps> http://soundcloud.com/you/apps </a>:
+																<img class="small" src="img/register-app.png">
+																<br><br>You will need to either sign into or create a SoundCloud account. Now click "register application." You will be taken to this page:
+
+																<img class="small" src="img/registerAppBar.png">
+
+																<br>Choose a name, check the Developer Policies box, and hit "Register" We'll call ours "SoundCloudAPIExample."
+																<br><br>Now we'll hit a roadblock.<br>
+																<img class="small" src="img/register-app-creds.png">
+
+																<br>Notice the empty input boxes labeled "Website for your app" and "Redirect URI for Authorization."
+																 We will need to be able to access our index file on a server, which we will point the box "website of your app" to, and we will need
+																 to <strong>host another file on that same server</strong> which we set the <code>redirect_uri</code> to.
+
+																 <br><br><button class="btn" onclick="$('#section-5').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Hosting our Website</button><br/><br/>
+
+                            </div>
+                        </div>
+
+                        <div id="section-5"  onclick="$('#section-6').animatescroll({scrollSpeed:3000,padding:-30,easing:'easeInOutBack'});">
+                            <div class="content-wrapper w70">
+                                <h1>Hosting our Website</h1>
+																<p>For this demo, we're going to use <strong>Amazon Web Services</strong> to host our website. Specifically, we are going to use Amazon Simple Service storage.
+																With Simple Service Storage, Inbound Data Transfer is free and outbound data transfer is free for 1 GB per region per month. Luckily this website will be small and not many will be using it
+																so I don't think we will get charged.  </p>
+
+																	<p> To start, we're going to assume that you already have an Amazon Web Services account.
+																	To host a simple website with javascript and html, simply go to the <a href="https://us-west-2.console.aws.amazon.com/console/">AWS Management Console</a>
+																and click on "S3". </p>
+
+																<img class="small" src="img/AWSS3.png">
+
+																<p>Then click "Create a bucket." You should be see something like this: </p>
+																<img class="small" src="img/createSite/1-Create_bucket.png">
+																<p>Choose a name and a region and click "create." </p>
+
+																<p>Next you will arrive at a page like this:</p>
+																<img class="small" src="img/createSite/2-hit-upload.png">
+
+																<p>Hit upload and navigate to the directory that you put our index.html file in to upload it:</p>
+																<img class="small" src="img/createSite/3-upload-from-computer.png">
+
+																<p>Now that the file is ready hit upload once more:</p>
+																<img class="small" src="img/createSite/4-hit-start-upload.png">
+
+																<p>Next, in order to make your file accessible, <strong>you need to right-click on it and hit make public</strong>:</p>
+																<img class="small" src="img/createSite/5-hit-make-public.png">
+
+																<p>Finally, to retreive the url, right click and hit <strong>properties</strong>:</p>
+																<img class="small" src="img/createSite/6-hit-properties.png">
 
 
-                     <a class="btn btn-default page-scroll" href="#htmlPage">Creating our HTML file</a>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- Services Section -->
-         <section id="htmlPage" class="services-section">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-12">
-                     <h1>Creating our HTML Page</h1>
-                     <p>Let's start with our basic outline code:</p>
-                     <code>
-                        <xmp>
-                           <!DOCTYPE html>
-                           <html>
-                              <head>
-                                 <meta charset="UTF-8">
-                                 <title>SoundCloudAuth</title>
-                              </head>
-                              <body>
-                                <h3>Sound Cloud Api Example</h3>
-                              </body>
-                           </html>
-                        </xmp>
-                     </code>
-                  </div>
-               </div>
-            </div>
-         </section>
+																<p>And now the url of your index file is visible in the right-hand side of the screen, next to "link":</p>
+																<img class="small" src="img/createSite/7-get-link.png">
 
-         <section id="registerApp" class="white-section">
-            <div class="container">
-               <div class="row">
-                   <h1>Getting our credentials.</h1>
-                   <p>
-                     What this means is that it, from an application (such as the web application
-                     we're making) that's registered with SoundCloud may allow users to log into their account
-                     without asking for the user's credentials.  </p>
+																<p>That's the first URL that we need to register our app. Let's enter it now.</p>
+																<img class="small" src="img/enterWebsiteOfApp.png">
 
-                     <h3>Register your app</h3>
-                     <p>The first thing we'll need to do is register our application. Go to <a href=http://soundcloud.com/you/apps> http://soundcloud.com/you/apps </a>
-                       to register your application. You will need to either log into or create a SoundCloud account in order for this to work.</p>
-                     <img class="screenie" src="img/register-app.png">
-                     <p> From here, click "register application." You will be taken to this page:</p>
-               </div>
-            </div>
-         </section>
+																<br><br><button class="btn" onclick="$('#section-6').animatescroll({scrollSpeed:2000,easing:'easeOutElastic'});">Next: Creating the Redirect URI</button><br/><br/>
 
-         <div id = "choose-name">
-         <section class="orange-section">
-            <div class="container">
-               <div class="row">
-                       <img class="screenie" src="img/registerAppBar.png">
-                       <p>Choose a name and check the Developer Policies box. We'll call ours "SoundCloudAPIExample."
-               </div>
-         </section>
+                        </div>
+											</div>
 
-          <section class="orange-section">
-            <div class="container">
-               <div class="row">
-                         <p>Now comes the tricky part.</p>
-                         <img class="screenie" src="img/register-app-creds.png">
-                         <p> At this point, you need to have a url that your html file can be reached at.
-                          If you don't know how to do this, try signing up for an Amazon Web Services account and use the <a href=http://docs.aws.amazon.com/AmazonS3/latest/gsg/SigningUpforS3.html>S3 Bucket feature</a>
-                          to get a URL that your file index.html can be accessed from.
-               </div>
-               <a class="btn btn-default page-scroll" href="#gettingOnline">Getting the site online</a>
+                        <div id="section-6">
+                            <div class="content-wrapper w60 disp_inl_blk">
+                                <h1>Creating the Redirect URI</h1>
+																<p>Navigate to the folder on your computer that the index.html file is saved in and create a new html file.
+																	In this example it will be called callback.html.
 
-            </div>
-         </section>
-       </div>
+																	In callback.html, copy or copy/paste this code:
+																	<div class="element-demo">
+																		<p>
+																			<xmp><!DOCTYPE html></xmp>
+																			<xmp>	<html>	</xmp>
+																			<xmp>	<head>	</xmp>
+																				<xmp> <meta charset="UTF-8">	</xmp>
+																				<xmp>	<title>Callback</title> </xmp>
+																				<xmp>	</head>	</xmp>
+																				<xmp>	<body onload="window.setTimeout(opener.SC.connectCallback, 1);"></xmp>
+																							<xmp> <p> </xmp>
+																								<xmp>	This page should close soon </xmp>
+																							<xmp>	</p>	</xmp>
+																					<xmp>	</body>	</xmp>
+																				<xmp>	</html>	</xmp>
 
 
-         <section id="gettingOnline" class="getting-online">
-           <div class="container">
-              <div class="row">
-                        <img class="screenie" src="img/createSite/1-Create_bucket.png">
-              </div>
-           </div>
-        </section>
+																		</p>
 
-        <section class="getting-online">
-          <div class="container">
-             <div class="row">
-                       <img class="screenie" src="img/createSite/2-hit-upload.png">
-             </div>
-          </div>
-       </section>
+																	</div>
+																	<p>Now save the file and <strong>upload callback.html to the same bucket</strong> as you uploaded index.html too, and <strong>don't forget to also make this file public.</strong> </p>
+																	<p>	Just like you did with index.html, right click and hit "properties" to <strong>grab the url. </strong>It should be the same as the last url except that index.html should be replaced with callback.html.</p>
+																	<p>Now paste that url into your app at <a href="www.soundcloud.you.apps">soundcloud.you.apps</a> and <strong>hit "Save app:"</strong>:</p>
+																	<img class="small" src="img/save-callback-uri.png">
 
-       <section class="getting-online">
-         <div class="container">
-            <div class="row">
-                      <img class="screenie" src="img/createSite/3-upload-from-computer.png">
-            </div>
-         </div>
-      </section>
+																	<br><br><button class="btn" onclick="$('#section-7').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Implementing the Javascript</button><br/><br/>
+															</div>
+                            </div>
 
-      <section class="getting-online">
-        <div class="container">
-           <div class="row">
-                     <img class="screenie" src="img/createSite/4-hit-start-upoad.png">
-           </div>
-        </div>
-     </section>
+														<div id="section-7">
+																<div class="content-wrapper w70 disp_inl_blk">
+																		<h1>Adding the Javascript</h1>
+																		<p>Finally, we're going to add some javascript to our index file that will <strong>use SoundCloud's HTTP API</strong>
+																			in order to <strong>prompt the user to connect their soundcloud account to our web app</strong> via a pop-up window.
+																			Add this javascript to index.html just before the closing <xmp></body></xmp> tag, <strong> replacing YOUR_CLIENT_ID and http://example.com/callback with the proper credentials</strong>:</p>
 
-     <section class="getting-online">
-       <div class="container">
-          <div class="row">
-                    <img class="screenie" src="img/createSite/5-hit-make-public.png">
-          </div>
-       </div>
-    </section>
-
-    <section class="getting-online">
-      <div class="container">
-         <div class="row">
-                   <img class="screenie" src="img/createSite/6-hit-properies.png">
-         </div>
-      </div>
-   </section>
-
-   <section class="getting-online">
-     <div class="container">
-        <div class="row">
-                  <img class="screenie" src="img/createSite/7-get-link.png">
-        </div>
-        <p>That's the first URL that we need to register our app. Let's enter it now.</p>
-     </div>
-  </section>
-
-   <section class="orange-section">
-    <div class="container">
-       <div class="row">
-                 <img class="screenie" src="img/enterWebsiteOfApp.png">
-       </div>
-       <p>Now, we still need one more thing to register our app so that we can authenticate users: That's the redirect uri.</p>
-</section>
-       <section class="orange-section">
-
-       <p>First, go into the folder on your computer that our index.html is saved in, and add in one more file: call this one callback.html.
-       In callback.html, paste this code: </p>
-       <code><xmp>
-
-         <!DOCTYPE html>
-         <html>
-           <head>
-             <meta charset="utf-8">
-             <title>Callback</title>
-           </head>
-           <body onload="window.setTimeout(opener.SC.connectCallback, 1);">
-             <p>
-               This page should close soon
-             </p>
-           </body>
-         </html>
-       </xmp>
-       </code>
-
-       Now, save the file and upload callback.html to the same bucket as you did before, and don't forget to also make this file public.
-       Just like you did with index.html, right click and hit "properties" to grab the url. It should be the same as the last url
-       but with index.html replaced with callback.html.
-
-
-     </section>
-
-     <section class="orange-section">
-       Now paste that url into your app at <a href="www.soundcloud.you.apps">soundcloud.you.apps</a> and hit "Save".</p>
-       <img class="screenie" src="img/save-callback-uri.png">
-
-     </section>
-
-     <section class="orange-section">
-      Finally, we're going to add the javascript to our index file that will propt the user to connect soundcloud to our web app.
-
-      Add this javascript to index.html just before the end of the <code><xml</body></xml></code>, replacing YOUR_CLIENT_ID and http://example.com/callback with the proper credentials:
-
-      <code><xmp>
-        <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
-        <script>
+<pre><code class="language-javascript">
+																			<xmp>	<script>
         SC.initialize({
           client_id: 'YOUR_CLIENT_ID',
           redirect_uri: 'http://example.com/callback'
@@ -282,56 +269,31 @@
           alert('Hello, ' + me.username);
       });
       </script>
-    </xmp>
+		</xmp>
+		</code>
+	</pre>
 
-    </code>
-     </section>
+	<p><small>YOUR_CLIENT_ID</small> should be replaced with <strong>the string of letters and numbers next to "client id" in your app</strong>,
+		and http://example.com/callback should be replaced with <strong>the live url to your callback file.</strong></p>
 
-     <section class="orange-section">
-       <p>  but replace YOUR_CLIENT_ID and http://example.com/callback with the proper credentials from your registered app:</p>
-         <img class="screenie" src="img/theseCreds.png">
+		<p>Hopefully you have now saved them <a href="www.soundcloud.you.apps">where you registered your app:</a>
+			<img class="small" src="img/theseCreds.png">
+			<p>Once you've done that, hit save and then <strong>re-upoad index.html to your S3 bucket</strong> (don't forget to <strong>make it public again!</strong>).</p>
 
-       <p>Hit save and then re-upoad index.html to your S3 bucket (don't forget to make it public again!).</p>
+			<p>  Now, assuming all has gone well, and you turn off your pop-up blocker, when you enter your web-page you should be greeted by this:</p>
+			<img class="small" src="img/popup-signin.png">
 
-     </section>
+			<p>Your web app is now all set to connect to the SoundCloud acccounts of visiting users! There are many more things you can do with the API from this point,
+      from allowing users to upload music to their SoundCloud accounts or play their music from your web app. Now that you've gotten started, check the documentation
+    at <a href=https://developers.soundcloud.com/>developers.soundcloud.com</a> for the next exciting step!</p>
 
-   </section>
-
-   <section class="orange-section">
-     <p>  Now, assuming all has gone well, and you turn off your pop-up blocker, when you enter your web-page you should be greeted by this:</p>
-       <img class="screenie" src="img/popup-signin.png">
-
-     <p>Your web app is now all set to connect to the SoundCloud acccounts of visiting users! There are many more things you can do with the API from this point,
-     from allowing users to upload music to their SoundCloud accounts or play their music from your web app. Now that you've gotten started, check the documentation
-   at <a href=https://developers.soundcloud.com/>developers.soundcloud.com</a> for the next exciting step!</p>
-
-   </section>
-
-
-
-      <!-- jQuery -->
-      <script src="js/jquery.js"></script>
-      <!-- Bootstrap Core JavaScript -->
-      <script src="js/bootstrap.min.js"></script>
-      <!-- Scrolling Nav JavaScript -->
-      <script src="js/jquery.easing.min.js"></script>
-      <script src="js/scrolling-nav.js"></script>
-      <script src="js/animatescroll.js"></script>
-
-
-      <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
-<script>
-SC.initialize({
-  client_id: '2e4710b467b68d08b88a8c078a9c56fc',
-  redirect_uri: 'https://s3-us-west-2.amazonaws.com/apiexample/callback.html'
-});
-
-// initiate auth popup
-SC.connect().then(function() {
-  return SC.get('/me');
-}).then(function(me) {
-  alert('Hello, ' + me.username);
-});
-</script>
-   </body>
+		<h2>Thank you for doing my tutorial, and I'll see you next time!</h2>
+		<p> -Colleen </p>
+																</div>
+                            <div class='content-wrapper w30 fr'>
+                                <a onclick="$('body').animatescroll();" class='ptr fr'><small>Go to Top</small></a>
+                            </div>
+                        </div>
+                </div>
+	</body>
 </html>
