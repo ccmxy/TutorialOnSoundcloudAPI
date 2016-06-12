@@ -1,25 +1,5 @@
 
- $( document ).ready(function() {
-   SC.initialize({
-     client_id: 'a69bfa074f201350bf0e5452c4e2256e',
-     redirect_uri: 'https://s3-us-west-2.amazonaws.com/tutorailforwebdev/callback.html'
- });
-
- // initiate auth popup
- SC.connect().then(function() {
-     return SC.get('/me');
- }).then(function(me) {
-     alert('Hello, ' + me.username);
- });
-});
-
-/*
- * @build  : 20-07-2013
- * @author : Ram swaroop
- * @site   : Compzets.com
- */
-
-
+//This stuff is for decoration
 (function($){
 
     // defines various easing effects
