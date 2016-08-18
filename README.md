@@ -7,4 +7,4 @@ Currently the tutorial is configured to immidiately ask users to log in. To view
 
 Otherwise, you will just be greeted by your SoundCloud username (or number if you don't have an account and log in with Google or Facebook). No information is saved.
 
-![After loggin in](./img/ReadMeScreenshot.png =300x300)
+![After loggin in](./img/ReadMeScreenshot.png)
