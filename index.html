@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
@@ -10,11 +8,10 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="Colleen Minor" />
-                <link rel="stylesheet" type="text/css" href="custom.css" />
 								<link rel="stylesheet" type="text/css" href="styles.css" />
                 <script src="jquery-1.8.3.min.js"></script>
                 <script src="scripts.js"></script>
-								<script src="bounce.js"></script>
+								<script src="scrollingEffects.js"></script>
 								<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -31,7 +28,7 @@
 					<ul>
 				<hx>Table of Contents</hx>
 						<li>
-							<a href="#" onclick="$('#section-2').animatescroll();">
+							<a href="#" onclick="$(scrollToAnchor('section-2', 'swing', 800));">
 								<span class="icon">
 									<i aria-hidden="true" class="icon-services"></i>
 								</span>
@@ -39,7 +36,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" onclick="$('#section-3').animatescroll();">
+							<a href="#" onclick="$(scrollToAnchor('section-3', 'swing', 800));">
 								<span class="icon">
 									<i aria-hidden="true" class="icon-portfolio"></i>
 								</span>
@@ -47,7 +44,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" onclick="$('#section-4').animatescroll();">
+							<a href="#" onclick="$(scrollToAnchor('section-4', 'swing', 800));">
 								<span class="icon">
 									<i aria-hidden="true" class="icon-blog"></i>
 								</span>
@@ -55,7 +52,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" onclick="$('#section-5').animatescroll();">
+							<a href="#" onclick="$(scrollToAnchor('section-5', 'swing', 800));">
 								<span class="icon">
 									<i aria-hidden="true" class="icon-team"></i>
 								</span>
@@ -63,7 +60,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" onclick="$('#section-6').animatescroll();">
+							<a href="#" onclick="$(scrollToAnchor('section-6', 'swing', 800));">
 								<span class="icon">
 									<i aria-hidden="true" class="icon-contact"></i>
 								</span>
@@ -71,7 +68,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#" onclick="$('#section-7').animatescroll();">
+							<a href="#" onclick="$(scrollToAnchor('section-7', 'swing', 800))">
 								<span class="icon">
 									<i aria-hidden="true" class="icon-contact"></i>
 								</span>
@@ -95,7 +92,7 @@
 																		 You know that behind the dashobard are a set of tools that you can use to request different services from your car, like "turn on blinker" or "switch to a higher gear."
 																		 You don't need to know the ins-and-outs of how a car works to use these tools, <strong>you just need to know how to use them.</strong>
 																</p>
-																<br><br><button class="btn" onclick="$('#section-3').animatescroll();">Next: Getting Started</button><br/><br/>
+																<br><br><button class="btn" onclick="$(scrollToAnchor('section-3', 'smoothMoves', 3000));">Next: Getting Started</button><br/><br/>
                             </div>
                         </div>
 
@@ -143,16 +140,11 @@
 
 																<br>If you click on the file from within your OS's file browser, it should open this simple webpage up in your browser:
 
-																<br><img id= "webImg" class="small" src="img/basicWebPage.png">
+																<br><img class="small" src="img/basicWebPage.png">
 
-																<br>Eventually we will get simple webpage this up online. But first we wjjjjill get started with the SoundCloud API.
-																<!-- $('html, body').stop().animate({ scrollTop: this.offset().top}, 800, "swing"); -->
-																<!-- <br><br><button class="btn" onclick="$('#section-4').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Registering our App</button><br/><br/> -->
+																<br>Eventually we will get simple webpage this up online. But first we will get started with the SoundCloud API.
+															<br><br><button class="btn" onclick="$(scrollToAnchor('section-4', 'easeInOutBounce', 2000));">Next: Registering our App</button><br/><br/>
 
-																<br><br><button class="btn" id="link" onclick="$(scrollToAnchor('section-4'))">Next: Reeegistering our App</button><br/><br/>
-																<script src="scripts.js"></script>
-
-															<!-- <br><br><button class="btn" onclick="$('#section-4').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});">Next: Registering our App</button><br/><br/> -->
                             </div>
                         </div>
 
@@ -178,15 +170,16 @@
 																 We will need to be able to access our index file on a server, which we will point the box "website of your app" to, and we will need
 																 to <strong>host a callback file on that same server</strong> which we set <code>redirect_uri</code> to.
 
-                                                                 <br><br>Upon a successful connection, this file will be used to <strong>send an authentication token back to our application</strong>, allowing the host app to access account privilages for a specific user. For security reasons, SoundCloud will only redirect users to URIs which are hosted <strong>on the same domain as the host app.</strong> Therefore, we will have to add in another file later. But we'll worry about that then.
+                                  <br><br>Upon a successful connection, this file will be used to <strong>send an authentication token back to our application</strong>, allowing the host app to access account privilages for a specific user. For security reasons, SoundCloud will only redirect users to URIs which are hosted <strong>on the same domain as the host app.</strong> Therefore, we will have to add in another file later. But we'll worry about that then.
+																	<br><br><button class="btn" onclick="$(scrollToAnchor('section-5', 'easeOutBounce', 2000));">Next: Hosting our Website</button><br/><br/>
 
-																 <!-- <br><br><button class="btn" onclick="$('#section-5').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Hosting our Website</button><br/><br/> -->
-																  <br><br><button class="btn" onclick="$('#section-5').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Hosting our Website</button><br/><br/>
 
                             </div>
                         </div>
+												<div id="section-5">
+                        <!-- <div id="section-5"  onclick="$('#section-6').animatescroll({scrollSpeed:3000,padding:-30,easing:'easeInOutBack'});"> -->
+												<!-- <br><br><button class="btn" onclick="$(scrollToAnchor('section-5', 'easeOutBounce', 2000));">Next: Hosting our Website</button><br/><br/> -->
 
-                        <div id="section-5"  onclick="$('#section-6').animatescroll({scrollSpeed:3000,padding:-30,easing:'easeInOutBack'});">
                             <div class="content-wrapper w70">
                                 <h1>Hosting our Website</h1>
 																<p>For this demo, we're going to use <strong>Amazon Web Services</strong> to host our website. Specifically, we are going to use Amazon Simple Service storage.
@@ -224,8 +217,7 @@
 
 																<p>That's the first URL that we need to register our app. Let's enter it now.</p>
 																<img class="small" src="img/enterWebsiteOfApp.png">
-
-																<br><br><button class="btn" onclick="$('#section-6').animatescroll({scrollSpeed:2000,easing:'easeOutElastic'});">Next: Creating the Redirect URI</button><br/><br/>
+																<br><br><button class="btn" onclick="$(scrollToAnchor('section-6', 'easeOutElastic', 2000));">Next: Creating the Redirect URI</button><br/><br/>
 
                         </div>
 											</div>
@@ -263,7 +255,10 @@
 																	<p>Now paste that url into your app at <a href="www.soundcloud.you.apps">soundcloud.you.apps</a> and <strong>hit "Save app:"</strong>:</p>
 																	<img class="small" src="img/save-callback-uri.png">
 
-																	<br><br><button class="btn" onclick="$('#section-7').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Adding the Javascript</button><br/><br/>
+																	<!-- <br><br><button class="btn" onclick="$(scrollToAnchor('section-5', 'easeOutBounce', 2000));">Next: Hosting our Website</button><br/><br/> -->
+																	<br><br><button class="btn" onclick="$(scrollToAnchor('section-7', 'easeOutBounce', 2000));">Next: Adding the Javascript</button><br/><br/>
+
+																	<!-- <br><br><button class="btn" onclick="$('#section-7').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});">Next: Adding the Javascript</button><br/><br/> -->
 															</div>
                             </div>
 
@@ -325,12 +320,10 @@
 		<p> &emsp; -Colleen </span>
 																</div>
                             <div class='content-wrapper w30 fr'>
-                                <a onclick="$('body').animatescroll();" class='ptr fr'><small>Go to Top</small></a>
+                                <a class='ptr fr' onclick="$('html, body').animate({ scrollTop: 0 })"><small>Go to Top</small></a>
                             </div>
                         </div>
                 </div>
 								<script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
 	</body>
-
-
 </html>
