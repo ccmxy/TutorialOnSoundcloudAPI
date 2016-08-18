@@ -3,8 +3,13 @@
 
 function scrollToAnchor(aid){
  var aTag = $("div[id='"+ aid +"']");
- $('html,body').animate({scrollTop: aTag.offset().top}, 800, "swing");
+ $('html,body').animate({scrollTop: aTag.offset().top}, 800, 'swing', function(){alert('done')});
 }
+
+// function scrollToAnchor(aid){
+//  var aTag = $("div[id='"+ aid +"']");
+//  $('html,body').animate({scrollTop: aTag.offset().top}, 800, "swing");
+// }
 
  $( document ).ready(function() {
    SC.initialize({
