@@ -1,9 +1,23 @@
 
+
+
+function scrollToAnchor(aid){
+ var aTag = $("div[id='"+ aid +"']");
+ $('html,body').animate({scrollTop: aTag.offset().top}, 800, "swing");
+}
+
  $( document ).ready(function() {
    SC.initialize({
      client_id: '898b179652144b48515ab6764540e7fa',
      redirect_uri: 'http://makesoundcloud.com/callback.html'
  });
+
+ function scrollToAnchor(aid){
+ 	var aTag = $("div[id='"+ aid +"']");
+ 	$('html,body').animate({scrollTop: aTag.offset().top},'slow');
+ }
+
+
 
 //I don't think this works either, the getTracks thing
  var getTracks = function() { return SC.get('/me/tracks'); };

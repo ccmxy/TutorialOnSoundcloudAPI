@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
@@ -93,7 +95,7 @@
 																		 You know that behind the dashobard are a set of tools that you can use to request different services from your car, like "turn on blinker" or "switch to a higher gear."
 																		 You don't need to know the ins-and-outs of how a car works to use these tools, <strong>you just need to know how to use them.</strong>
 																</p>
-																<br><br><button class="btn" onclick="$('#section-3').animatescroll({scrollSpeed:3000,easing:'easeInOutBounce'});">Next: Getting Started</button><br/><br/>
+																<br><br><button class="btn" onclick="$('#section-3').animatescroll();">Next: Getting Started</button><br/><br/>
                             </div>
                         </div>
 
@@ -141,10 +143,16 @@
 
 																<br>If you click on the file from within your OS's file browser, it should open this simple webpage up in your browser:
 
-																<br><img class="small" src="img/basicWebPage.png">
+																<br><img id= "webImg" class="small" src="img/basicWebPage.png">
 
 																<br>Eventually we will get simple webpage this up online. But first we will get started with the SoundCloud API.
-															<br><br><button class="btn" onclick="$('#section-4').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});">Next: Registering our App</button><br/><br/>
+																<!-- $('html, body').stop().animate({ scrollTop: this.offset().top}, 800, "swing"); -->
+																<!-- <br><br><button class="btn" onclick="$('#section-4').animatescroll();">Next: Registering our App</button><br/><br/> -->
+
+																<br><br><button class="btn" id="link" onclick="$(scrollToAnchor('section-4'))">Next: Registering our App</button><br/><br/>
+																<script src="scripts.js"></script>
+
+															<!-- <br><br><button class="btn" onclick="$('#section-4').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});">Next: Registering our App</button><br/><br/> -->
                             </div>
                         </div>
 
@@ -322,4 +330,6 @@
                 </div>
 								<script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
 	</body>
+
+
 </html>
