@@ -1,5 +1,14 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+img.small{
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  margin: 10px;
+}
+
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 15px; padding: 0; margin: 0;}
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
@@ -111,11 +120,11 @@ color: #FE4600;
     .fr{float:none}
     .w30,.w60,.w70{width:100%}
 }
-
+/*
 .small{
   max-width: 300px;
   max-height: 300px;
   width: auto;
   height: auto;
   margin: 10px;
-}
+}*/
