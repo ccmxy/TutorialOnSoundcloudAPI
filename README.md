@@ -8,3 +8,7 @@ Currently the tutorial is configured to immidiately ask users to log in. To view
 Otherwise, you will just be greeted by your SoundCloud username (or number if you don't have an account and log in with Google or Facebook). No information is saved.
 
 ![After loggin in](./img/ReadMeScreenshot.png)
+
+You will also be flashed your id number for your SoundCloud profile. Though around September 2016 chrome will stop allowing alert() during microtask so then you won't get any messege on chrome. 
+
+
